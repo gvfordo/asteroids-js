@@ -3,22 +3,22 @@
 
 
 	var Asteroid = Asteroids.Asteroid = function (pos, vel, radius, color) {
-		Asteroids.MovingObject.call(this, pos, vel, radius);
+		Asteroids.MovingObject.call(this, pos, vel, radius, color);
 		this.pos = pos;
 		this.vel = vel;
 		this.radius = radius;
+		this.color = color;
 	};
-
-	Asteroid.COLOR = "black";
-	Asteroid.RADIUS = 50;
-	Asteroid.MAXVEL = 10;
-
 
 	Asteroids.inherits(Asteroid, Asteroids.MovingObject);
 
+	Asteroid.COLOR = "black";
+	Asteroid.RADIUS = 20;
+	Asteroid.MAXVEL = 5;
 
 	Asteroid.randomAsteroid = function(dimx, dimy) {
 		var that = this;
+
 		return new Asteroid(
 				[dimx * Math.random(), dimy * Math.random()],
 				that.randomVec(),
