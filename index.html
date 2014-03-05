@@ -4,12 +4,16 @@
     <title>DrunkenCircles</title>
 </head>
 <body>
-    <canvas width="1000" height="1000"></canvas>
+    <canvas width="1200" height="800"></canvas>
 
+    <script src="moving_object.js"></script>
     <script src="asteroids.js"></script>
+    <script src="game.js"></script>
+
     <script>
         var canvas = document.getElementsByTagName("canvas")[0];
-        new Asteroids.Game(1000, 1000).start(canvas);
+        var our_game = new Asteroids.Game(canvas);
+        our_game.start();
     </script>
 </body>
 </html>
