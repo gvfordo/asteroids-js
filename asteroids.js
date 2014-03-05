@@ -2,12 +2,8 @@
 	var Asteroids = root.Asteroids = (root.Asteroids || {});
 
 
-	var Asteroid = Asteroids.Asteroid = function (pos, vel, radius, color) {
-		Asteroids.MovingObject.call(this, pos, vel, radius, color);
-		this.pos = pos;
-		this.vel = vel;
-		this.radius = radius;
-		this.color = color;
+	var Asteroid = Asteroids.Asteroid = function (pos, vel) {
+		Asteroids.MovingObject.call(this, pos, vel, Asteroid.RADIUS, Asteroid.COLOR);
 	};
 
 	Asteroids.inherits(Asteroid, Asteroids.MovingObject);
@@ -21,9 +17,7 @@
 
 		return new Asteroid(
 				[dimx * Math.random(), dimy * Math.random()],
-				that.randomVec(),
-				that.RADIUS,
-				that.COLOR
+				that.randomVec()
 		);
 	};
 
