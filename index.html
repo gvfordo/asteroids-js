@@ -4,11 +4,12 @@
     <title>Pod2Swag-Roids</title>
 </head>
 <body>
-    <canvas width="1200" height="800"></canvas>
+    <canvas width="1200" height="800" style="background-image: url('./bg.jpg')"></canvas>
     <script src="keymaster.js"></script>
     <script src="moving_object.js"></script>
-    <script src="asteroids.js"></script>
+    <script src="bullet.js"></script>
     <script src="ship.js"></script>
+    <script src="asteroids.js"></script>
     <script src="game.js"></script>
 
     <script>
@@ -16,5 +17,6 @@
         var our_game = new Asteroids.Game(canvas);
         our_game.start();
     </script>
+
 </body>
 </html>

@@ -8,7 +8,7 @@
 
 	Asteroids.inherits(Asteroid, Asteroids.MovingObject);
 
-	Asteroid.COLOR = "black";
+	Asteroid.COLOR = "white";
 	Asteroid.RADIUS = 20;
 	Asteroid.MAXVEL = 5;
 
